@@ -22,4 +22,3 @@ zinit wait lucid light-mode for \
 
 
 zinit snippet "${HOME}/.zsh.d/file_manager_keybinds.zsh"
-zinit snippet "${HOME}/.zsh.d/profile.zsh"
