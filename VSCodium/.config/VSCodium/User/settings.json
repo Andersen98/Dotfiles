@@ -1,0 +1,7 @@
+{
+    "Lua.codeLens.enable": true,
+    "Lua.completion.callSnippet": "Both",
+    "Lua.completion.displayContext": 3,
+    "editor.tabCompletion": "on",
+    "window.zoomLevel": 1
+}
