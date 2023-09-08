@@ -4,7 +4,7 @@ I'm keeping a list of fonts that I like.
 - [[https://opendyslexic.org/][open dyslexic fonts]] 
 
 
-#+begin_src emacs-lisp
+#+begin_src emacs-lisp :tangle no
 ;; added to $DOOMDIR/config.el
 (setq doom-font 
     (font-spec 
@@ -50,42 +50,14 @@ Whenever you reconfigure a package, make sure to wrap your config in an
    - Setting variables which explicitly tell you to set them before their
      package is loaded (see 'C-h v VARIABLE' to look up their documentation).
    - Setting doom variables (which start with 'doom-' or '+').
+
+
+* Org
+
 #+begin_src emacs-lisp
 (setq org-directory "~/org")
 #+end_src
 
-* Org
-
-** Get Things Done (GTD)
-I'm using the [[https://emacs.cafe/emacs/orgmode/gtd/2017/06/30/orgmode-gtd.html][get things done (GTD) workflow]].
-
-*** The GTD inbox
-This is where every thought should be collected. We capture the thought with C-c c
-
-#+begin_src emacs-lisp
-(setq org-agenda-files '("~/gtd/inbox.org"
-                         "~/gtd/gtd.org"
-                         "~/gtd/tickler.org"))
-#+end_src
-
-#+begin_src emacs-lisp
-(setq org-capture-templates '(("t" "Todo [inbox]" entry
-                              (file+headline "~/gtd/inbox.org" "Tasks")
-                              "* TODO %i%?")
-                              ("T" "Tickler" entry
-                               (file+headline "~/gtd/tickler.org" "Tickler")
-                              "* %i%? \n %U")))
-#+end_src
-
-When processing the inbox, refile each actionable entry so long that it belongs to a project.
-if need be, setup a new project out of it.
-
-Here are the refile targets:
-#+begin_src emacs-lisp
-(setq org-refile-targets '(("~/gtd/gtd.org" :maxlevel . 3)
-                           ("~/gtd/someday.org" :level . 1)
-                           ("~/gtd/tickler.org" :maxlevel . 2)))
-#+end_src
 
 *** The projects file
 The main file is [["~/gtd/gtd.org"]]  and has all active projects.
