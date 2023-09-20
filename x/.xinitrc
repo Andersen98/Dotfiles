@@ -47,6 +47,8 @@ case "$session" in
         exec awesome ;;
     alacritty)
         exec alacritty --dimensions 213 56 ;;
+    lxqt)
+        exec startlxqt ;;
     *)
         exec "$session"
 esac
