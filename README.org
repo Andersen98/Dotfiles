@@ -2,7 +2,16 @@
 A place to keep dot files consistent across my machines. Uses gnu stow.
 
 ** Install
+Special instructions for awesome wm. see below.
+
+*** For Awesome
+For some reason awesome wm has a bug when i use the dot- naming convention, so we don't use the --dotfiles option for this case.
+#+begin_src bash
+stow awesome
+#+end_src
+
+*** For Everything Else
 
 #+begin_src bash
-stow ${thing-ya-wanna-install}
-#+end_srcsh
+stow --dotfiles ${thing-ya-wanna-install}
+#+end_src
