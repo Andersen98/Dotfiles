@@ -105,5 +105,6 @@ config= function()
 })
 end,
 },
+{"junegunn/goyo.vim"},
 })
 
