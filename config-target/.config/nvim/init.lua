@@ -10,7 +10,6 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({
 	{url="https://github.com/fladson/vim-kitty"},
 	{
@@ -106,5 +105,7 @@ config= function()
 end,
 },
 {"junegunn/goyo.vim"},
+{ "savq/melange-nvim" },
 })
-
+vim.opt.termguicolors = true
+vim.cmd.colorscheme 'melange'
