@@ -105,7 +105,4 @@ config= function()
 end,
 },
 {"junegunn/goyo.vim"},
-{ "savq/melange-nvim" },
 })
-vim.opt.termguicolors = true
-vim.cmd.colorscheme 'melange'
