@@ -15,3 +15,6 @@ stow awesome
 #+begin_src bash
 stow --dotfiles ${thing-ya-wanna-install}
 #+end_src
+
+** Debugging
+   Run xdg-ninja to look for unwanted files in the home dir.
