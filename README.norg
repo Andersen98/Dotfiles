@@ -1,0 +1,22 @@
+* README
+  This repo contains my dotfiles.
+  I chose [dotdrop] to organize them.
+  Here is [dotdrop]{https://github.com/deadc0de6/dotdrop}'s repository. 
+
+** Setup
+
+   This repo comes with [dotdrop] added as a submodule.
+   To get things initialized, you'll wanna make a venv and install dotdrop to it.
+
+	@code bash
+	git submodule update --init --recursive
+	python3 -m venv .venv
+	source .venv/bin/activate #use activate.fish for fish or activate.csh for csh
+	pip install -r dotdrop/requirments.txt
+	export DOTDROP_VIRTUALENV=.venv
+	#set -gx DOTDROP_VIRTUALENV .venv #for fish
+
+	## use dotdrop
+	./dotdrop.sh --help
+	@end
+

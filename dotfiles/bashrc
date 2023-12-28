@@ -1,0 +1,26 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+# >>> mamba initialize >>>
+# !! Contents within this block are managed by 'mamba init' !!
+export MAMBA_EXE="/home/maeve/.local/bin/micromamba";
+export MAMBA_ROOT_PREFIX="/home/maeve/micromamba";
+__mamba_setup="$('/home/maeve/.local/bin/micromamba' shell hook --shell bash --prefix '/home/maeve/micromamba' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__mamba_setup"
+else
+    if [ -f "/home/maeve/micromamba/etc/profile.d/micromamba.sh" ]; then
+        . "/home/maeve/micromamba/etc/profile.d/micromamba.sh"
+    else
+        export  PATH="/home/maeve/micromamba/bin:$PATH"  # extra space after export prevents interference from conda init
+    fi
+fi
+unset __mamba_setup
+# <<< mamba initialize <<<
